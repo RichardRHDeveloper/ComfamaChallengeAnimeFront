@@ -1,0 +1,87 @@
+@import './../../../styles/mixins.scss';
+@import './../../../styles/variables.scss';
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  overflow: hidden;
+  padding-bottom: 60px;
+
+  @include FromTo($huge-screen) {
+    padding-bottom: 0px;
+  }
+
+  &__carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    &__group {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      @include FromTo($large-screen) {
+        padding: 0px 30px;
+      }
+
+      &__element {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1%;
+
+        @include FromTo($small-screen) {
+          width: 50%;
+        }
+
+        @include FromTo($large-screen) {
+          width: 33%;
+        }
+
+        @include FromTo($huge-screen) {
+          width: 20%;
+        }
+      }
+    }
+
+  }
+
+  &__prev-button,
+  &__next-button {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+
+    @include FromTo($huge-screen) {
+      width: auto;
+      top: 50%;
+      height: 88%;
+    }
+  }
+
+  &__prev-button {
+    left: 0;
+  }
+  
+  &__next-button {
+    right: 0;
+  }
+
+}
+
+
+

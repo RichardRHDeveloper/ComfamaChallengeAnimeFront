@@ -1,0 +1,18 @@
+@import './../../../styles/mixins.scss';
+@import './../../../styles/variables.scss';
+
+.card_empty {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    border: solid 2px #f2f2f2;
+    box-shadow: 5px 5px 5px 0px #e9e9e9;
+
+    @include FromTo($small-screen) {
+        height: 500px;
+    }
+
+    @include FromTo($large-screen) {
+        height: 400px;
+    }
+}

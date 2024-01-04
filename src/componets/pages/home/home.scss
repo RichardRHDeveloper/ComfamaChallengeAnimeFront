@@ -1,0 +1,63 @@
+@import './../../../styles/cleaningStyles.scss';
+
+.container {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    &__contentFilter {
+        width: 100%;
+
+        @include FromTo($large-screen) {
+            width: 92%;
+          }
+
+        &__search {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            &__input {
+                width: 70%;
+                font-size: 20px;
+                padding: 5px 10px;
+                border: solid 2px #c2c2c2;
+                border-radius: 5px;
+            }
+
+            &__button {
+                width: 25%;
+                padding: 5px 10px;
+                font-size: 15px;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        }
+
+        &__pagination{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            select{
+                width: 45%;
+                border: solid 2px #c2c2c2;
+                font-size: 15px;
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                @include FromTo($large-screen) {
+                    width: 20%;
+                  }
+            }
+        }
+        
+    }
+}

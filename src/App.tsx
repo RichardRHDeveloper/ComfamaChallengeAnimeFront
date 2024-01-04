@@ -1,8 +1,12 @@
-import React from 'react'
+import { AnimeContextProvider } from "./contexts/AnimeContext";
+import Home from './componets/pages/home/Home';
+import { FC } from "react";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
-    <div></div>
+    <AnimeContextProvider>
+      <Home/>
+    </AnimeContextProvider>
   )
 }
 
