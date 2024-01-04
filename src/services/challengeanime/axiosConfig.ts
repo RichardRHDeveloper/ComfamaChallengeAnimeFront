@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
 import { ResponseApiInterface } from '../../interfaces/generals';
 import { DataApiAnimeInterface } from '../../interfaces/challengeAnime';
 
-const baseURL = process.env.REACT_APP_CHALLENGE_ANIME || 'http://localhost:9000/jikan';
+const baseURL = process.env.REACT_APP_CHALLENGE_ANIME || 'http://ec2-3-138-75-214.us-east-2.compute.amazonaws.com:9000/jikan';
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL,
